@@ -1,3 +1,11 @@
+/*The following section is the menu of the entire website.
+By modifying a variable here, you're changing the whole website's appearance.*/
+:root {
+  --background-color: #ffffff; /*White*/
+  --secondary-color:  ; /*Dark sage green*/
+  --accent-color:  ; /*Sage green*/
+}
+
 /*The following section is ONLY used for storing the available text styles.*/
 .poppins-thin {
   font-family: "Poppins", sans-serif;
