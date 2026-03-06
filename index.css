@@ -72,6 +72,7 @@ By modifying a variable here, you're changing the whole website's appearance.*/
 
 #header {
   text-align: center;
+  color: var(--text-color);
 }
 
 #about-me {
@@ -83,6 +84,7 @@ By modifying a variable here, you're changing the whole website's appearance.*/
   #table-aboutme{
      font-family: "Poppins";
      font-weight: 300;
+     color: var(--text-color);
      border-collapse: collapse;
   }
   #table-aboutme td{
@@ -93,5 +95,5 @@ By modifying a variable here, you're changing the whole website's appearance.*/
   }
   #table-aboutme tr{
      background-color: var(--primary-color);
-     color: #000000;
+     color: var(--primary-color);
   }
