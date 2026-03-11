@@ -142,3 +142,49 @@ a {
   transform: translate(0);
 }
 /*End of custom button styles for the Lorebook button*/
+
+/*Custom button styles for the Credits button on the homepage*/
+#button-credits-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-credits {
+  padding: 20px 40px;
+  background: none;
+  border: none;
+  position: relative;
+  font-family: Poppins, "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+#button-credits:after,
+#button-credits:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #000;
+  transition: transform .2s;
+}
+
+#button-credits:after {
+  transform: translate(3px, 3px);
+}
+
+#button-credits:before {
+  transform: translate(-3px, -3px);
+}
+
+#button-credits:hover:after,
+#button-credits:hover:before {
+  transform: translate(0);
+}
+/*End of custom button styles for the Credits button*/
