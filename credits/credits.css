@@ -1,11 +1,3 @@
-:root {
-  --background-color: #ffffff;
-  --accent-color: #64805c;
-  --hover-accent-color: #485c42;
-  --text-color: #000000;
-  --italic-color: #595959;
-}
-
 html {
   opacity: 0;
   transform: translateY(10px);

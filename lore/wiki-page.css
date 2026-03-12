@@ -1,9 +1,3 @@
-:root {
-  --background-color: #ffffff;
-  --accent-color: #64805c;
-  --text-color: #000000;
-}
-
 html {
   opacity: 0;
   transform: translateY(10px);

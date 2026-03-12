@@ -1,8 +1,6 @@
 :root {
-  --background-color: #ffffff;
-  --accent-color: #64805c;
-  --text-color: #000000;
-  --height: calc( 80vh - 50px );
+  /* Page-specific layout variables */
+  --height: calc(80vh - 50px);
   --width: 450px;
 }
 

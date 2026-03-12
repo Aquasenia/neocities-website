@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Home | Aquasen's World</title>
     <link rel="stylesheet" href="index.css" title="index.css" type="text/css" />
+    <link rel="stylesheet" href="/theme.css" title="theme.css" type="text/css" />
     
       <!-- Links for the Poppins font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,66 +21,76 @@
       <!-- Link for Font Awesome icons -->
       <script src="https://kit.fontawesome.com/27f3aa2903.js" crossorigin="anonymous"></script>
       <!-- End of link for Font Awesome icons -->
+      <script src="/theme-init.js"></script>
       <script src="/page-transitions.js" defer></script>
       <noscript><style>html{opacity:1!important;}</style></noscript>
   </head>
   <body>
-      
-
-      <!-- Navigation bar for the homepage -->
+    <header>
       <div id="navigation-bar">
         <a href="/index.html" class="nav-link" target="_self" title="Get back to the website's landing page.">Home</a>
         <a href="/lore/lorebook.html" class="nav-link" target="_self" title="Learn more about Aquasen's world.">Lorebook</a>
         <a href="/credits/credits.html" class="nav-link" target="_self" title="See the credits for this website.">Credits</a>
-      </div>
-      <!--End of navbar-->
 
-      <div id="welcome">
-        <h1>Welcome to Aquasen's lore cave.</h1>
-        <p>Here, you'll find all kinds of things. Even dragons!</p>
       </div>
-      <br>
 
-      <!-- Button section that, if clicked, will lead to the Lorebook page -->
-      <div class="header">
-        <p>You can click on the button below to explore the lore I've created so far!</p>
-        <br>
-        <div id="button-lorebook-container">
-          <a href="../lore/lorebook.html" id="button-lorebook" target="_self" title="Explore the lore I've created for my world!">
-            <span>Open the Lorebook</span>
-          </a>
+      <div id="hero">
+        <div class="hero-content">
+          <div id="welcome">
+            <h1>Welcome to Aquasen's lore cave.</h1>
+            <p>Here, you'll find all kinds of things. Even dragons!</p>
+          </div>
+
+          <div class="hero-actions">
+            <div class="hero-action">
+              <a href="../lore/lorebook.html" id="button-lorebook" target="_self" title="Explore the lore I've created for my world!">
+                <span>Open the Lorebook</span>
+              </a>
+            </div>
+
+            <div class="hero-action">
+              <a href="../credits/credits.html" id="button-credits" target="_self" title="See the credits for this website!">
+                <span>Open the Credits</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-  
-      <div>
-        <p>Or, if you want to see the credits for this website, you can click on the button below!</p>
-        <br>
-        <div id="button-credits-container">
-          <a href="../credits/credits.html" id="button-credits" target="_self" title="See the credits for this website!">
-            <span>Open the Credits</span>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>Welcome, traveler</h2>
+        <p>This website is a growing collection of stories, species, and characters from Aquasen's world. You can jump in from the boxes below or explore the lore menu for deeper dives.</p>
+
+        <ul class="about-list">
+          <li><strong>Explore:</strong> Use the lore menu or the cards below to jump into sections easily.</li>
+          <li><strong>Discover:</strong> Find species profiles, character writeups, and worldbuilding extras.</li>
+          <li><strong>Customize:</strong> Use the theme toggle (top right) to switch between light and dark mode.</li>
+        </ul>
+      </section>
+
+      <section id="quick-links">
+        <h2>Explore the site</h2>
+
+        <div class="card-grid">
+          <a class="card" href="../lore/lorebook.html">
+            <h3>Lorebook</h3>
+            <p>A collection of all the lore I've created for my world so far.</p>
+          </a>
+
+          <a class="card" href="../credits/credits.html">
+            <h3>Credits</h3>
+            <p>A list of all the people who contributed to this website in some way.</p>
           </a>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <br>
+    <footer id="footer">
+      <p>Copyright © 2026 Aquasen. All rights reserved.</p>
+    </footer>
 
-      <div>
-      <table id="menu">
-        <tr>
-          <td><a href="../lore/lorebook.html">Lorebook</a></td>
-          <td>A collection of all the lore I've created for my world so far.</td>
-        </tr>
-        <tr>
-          <td><a href="../credits/credits.html">Credits</a></td>
-          <td>A list of all the people who contributed to this website in some way.</td>
-        </tr>
-      </table>
-      </div>
-
-      <div id="footer">
-        <p>Copyright © 2026 Aquasen. All rights reserved.</p>
-      </div>
-
-  <script src="../index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>

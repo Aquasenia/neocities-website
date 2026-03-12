@@ -1,0 +1,107 @@
+:root {
+  --background-color: #ffffff;
+  --background-start: #f6fffa;
+  --background-mid: #ffffff;
+  --background-end: #f0f5ff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --text-color: #0f0f0f;
+  --muted-text: rgba(0, 0, 0, 0.65);
+  --accent-color: #64805c;
+  --hover-accent-color: #485c42;
+  --italic-color: #595959;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+.dark-mode {
+  --background-color: #090c11;
+  --background-start: #07161b;
+  --background-mid: #0f1c2c;
+  --background-end: #1a2235;
+  --surface: rgba(16, 20, 28, 0.82);
+  --text-color: #e9edf6;
+  --muted-text: rgba(234, 240, 255, 0.75);
+  --accent-color: #8dbda1;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+.light-mode {
+  /* Explicit class so the theme can be forced in browsers that don't support prefers-color-scheme */
+  --background-color: #ffffff;
+  --background-start: #f6fffa;
+  --background-mid: #ffffff;
+  --background-end: #f0f5ff;
+  --surface: rgba(255, 255, 255, 0.88);
+  --text-color: #0f0f0f;
+  --muted-text: rgba(0, 0, 0, 0.65);
+  --accent-color: #64805c;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth theme transitions */
+html,
+body,
+#navigation-bar,
+#welcome,
+.card,
+#theme-toggle {
+  transition: background 260ms ease, color 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+/* Theme toggle button (shared across all pages) */
+#theme-toggle {
+  /* Use the same surface as the rest of the site for consistent theming */
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+
+  /* Default to fixed positioning for pages without a header/nav bar */
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+}
+
+/* When the toggle is placed inside a header or nav bar, position it in the top-right corner */
+header,
+#navigation-bar {
+  position: relative;
+}
+
+header #theme-toggle,
+#navigation-bar #theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  margin-left: 0;
+}
+
+html.dark-mode #theme-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+#theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+html.dark-mode #theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#theme-toggle:focus-visible {
+  outline: 3px solid rgba(100, 128, 92, 0.5);
+  outline-offset: 2px;
+}
