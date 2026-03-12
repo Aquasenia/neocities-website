@@ -16,12 +16,19 @@ if (speciesGrid && speciesSearch) {
   noResults.hidden = true;
   speciesGrid.insertAdjacentElement("afterend", noResults);
 
-  // Ensure each card uses its configured image (if provided) and is tagged for filtering.
+  // Ensure each card uses its configured image (if provided) and links to the correct target.
   cards.forEach((card) => {
     const img = card.querySelector(".species-card__image");
     const imageUrl = card.dataset.image;
     if (img && imageUrl) {
       img.src = imageUrl;
+    }
+
+    const link = card.querySelector(".species-card__link");
+    const targetUrl = card.dataset.url;
+    if (link) {
+      // Default to a no-op href to avoid jumping to the top of the page.
+      link.href = targetUrl || "javascript:void(0)";
     }
   });
 

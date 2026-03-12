@@ -4,6 +4,17 @@
   --text-color: #000000;
 }
 
+html {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+html.page-is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
   background-color: var(--background-color);
   box-sizing: border-box;
@@ -42,12 +53,19 @@ p {
   font-family: "Poppins", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 a {
   color: var(--accent-color);
   text-decoration: none;
+}
+
+.small-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*Navigation bar styles, which will be reused across all pages of the website*/
@@ -148,6 +166,7 @@ body.species-page .category-filters {
   gap: 10px;
   margin: 16px auto 0;
   max-width: 840px;
+  font-family: "Poppins", "Arial", sans-serif;
 }
 
 body.species-page .category-filter {
@@ -156,6 +175,7 @@ body.species-page .category-filter {
   border: 1px solid rgba(100, 128, 92, 0.3);
   background: rgba(255, 255, 255, 0.6);
   color: rgba(31, 45, 30, 0.9);
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -286,6 +306,7 @@ body.species-page .species-card__category {
   border-radius: 999px;
   background: rgba(100, 128, 92, 0.16);
   color: rgba(31, 45, 30, 0.9);
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -300,6 +321,7 @@ body.species-page .species-card h3 {
 
 body.species-page .species-card .tagline {
   margin: 0 0 10px;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
   opacity: 0.8;
 }
@@ -316,6 +338,7 @@ body.species-page .species-card .tag {
   align-items: center;
   padding: 4px 10px;
   border-radius: 999px;
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: 12px;
   background: rgba(100, 128, 92, 0.12);
   color: rgba(34, 45, 40, 0.9);
