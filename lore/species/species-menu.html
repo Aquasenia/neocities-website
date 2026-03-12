@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Page | Aquasen's World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Species | Aquasen's World</title>
     <link rel="stylesheet" href="/lore/wiki-page.css" title="wiki-page.css" type="text/css" />
     
       <!-- Links for the Poppins font -->
@@ -20,8 +21,9 @@
       <!-- Link for Font Awesome icons -->
       <script src="https://kit.fontawesome.com/27f3aa2903.js" crossorigin="anonymous"></script>
       <!-- End of link for Font Awesome icons -->
+
   </head>
-  <body>
+  <body class="species-page">
 
       <!-- Navigation bar for the homepage -->
       <div id="navigation-bar">
@@ -31,10 +33,138 @@
       </div>
       <!--End of navbar-->
 
+      <main>
+        <header class="page-header">
+          <h1>Species</h1>
+          <p>Browse the known species of Aquasen's world. Click a card to learn more and explore what makes each group unique.</p>
+          <div class="search-wrapper">
+            <input id="species-search" type="search" placeholder="Search species..." aria-label="Search species" />
+          </div>
+
+          <div class="category-filters" aria-label="Filter by category"></div>
+        </header>
+
+        <section id="species-grid" aria-label="Available species">
+          <article class="species-card" data-category="Category A" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category A</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+
+          <article class="species-card" data-category="Category B" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category B</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+
+          <article class="species-card" data-category="Category C" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category C</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+
+          <article class="species-card" data-category="Category D" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category D</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+
+          <article class="species-card" data-category="Category E" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category E</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+
+          <article class="species-card" data-category="Category F" data-image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" data-name="This is a title" data-tagline="This is a description." data-traits="Trait A|Trait B|Trait C">
+            <a class="species-card__link" href="#" aria-label="View details for This is a title">
+              <img class="species-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='240'%3E%3Crect width='100%25' height='100%25' fill='%23e6e6e6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='Arial,Helvetica,sans-serif' font-size='24'%3EImage%3C/text%3E%3C/svg%3E" alt="Placeholder image for This is a title" />
+              <div class="species-card__header">
+                <span class="species-card__category">Category F</span>
+                <h3>This is a title</h3>
+              </div>
+              <p class="tagline">This is a description.</p>
+              <div class="tags">
+                <span class="tag">Trait A</span>
+                <span class="tag">Trait B</span>
+                <span class="tag">Trait C</span>
+              </div>
+              <span class="learn-more">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+          </article>
+        </section>
+
+      <script src="/lore/wiki-page.js" defer></script>
+
       <div id="footer">
         <p>Copyright © 2026 Aquasen. All rights reserved.</p>
       </div>
 
-  <script src="../index.js"></script>
   </body>
 </html>

@@ -88,3 +88,271 @@ a {
   transform-origin: left;
 }
 /*End of navigation bar styles*/
+
+#footer {
+  text-align: center;
+  padding: 10px 0;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Species menu page styles (shared across wiki pages) */
+body.species-page {
+  --species-bg: #fbfcff;
+  --species-card: rgba(255, 255, 255, 0.7);
+  --species-card-border: rgba(100, 128, 92, 0.35);
+  --species-card-shadow: rgba(33, 33, 33, 0.08);
+  --species-accent: #64805c;
+  --species-accent-2: #2a4b3e;
+  --species-text: #1b1b1b;
+
+  background: radial-gradient(circle at top, rgba(100, 128, 92, 0.15), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(35, 50, 30, 0.06), transparent 55%),
+    var(--background-color);
+}
+
+body.species-page main {
+  margin: 24px auto 80px;
+  max-width: 1100px;
+}
+
+body.species-page .page-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+body.species-page .page-header h1 {
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+body.species-page .page-header p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin: 0 auto 18px;
+  max-width: 720px;
+}
+
+body.species-page .search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+body.species-page .category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px auto 0;
+  max-width: 840px;
+}
+
+body.species-page .category-filter {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 128, 92, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(31, 45, 30, 0.9);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+body.species-page .category-filter:hover {
+  transform: translateY(-1px);
+  border-color: rgba(100, 128, 92, 0.45);
+}
+
+body.species-page .category-filter.active {
+  background: rgba(100, 128, 92, 0.22);
+  border-color: rgba(100, 128, 92, 0.6);
+}
+
+body.species-page #species-search {
+  width: min(420px, 85%);
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 128, 92, 0.3);
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.species-page #species-search:focus {
+  border-color: var(--species-accent);
+  box-shadow: 0 0 0 4px rgba(100, 128, 92, 0.12);
+}
+
+body.species-page #species-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+  gap: 22px;
+  justify-content: center;
+}
+
+body.species-page .species-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.65));
+  border: 1px solid rgba(100, 128, 92, 0.35);
+  border-radius: 22px;
+  padding: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(33, 33, 33, 0.14);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(14px);
+}
+
+body.species-page .species-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+body.species-page .species-card:hover,
+body.species-page .species-card:focus-visible {
+  border-color: rgba(100, 128, 92, 0.65);
+  box-shadow: 0 20px 40px rgba(33, 33, 33, 0.22);
+  transform: translateY(-4px);
+}
+
+body.species-page .species-card:hover .learn-more {
+  background: rgba(100, 128, 92, 0.22);
+  transform: translateX(2px);
+}
+
+body.species-page .species-card:hover .learn-more i {
+  transform: translateX(4px);
+}
+
+body.species-page .species-card:focus-visible {
+  outline: 3px solid rgba(100, 128, 92, 0.35);
+  outline-offset: 3px;
+}
+
+body.species-page .species-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 15%, rgba(100, 128, 92, 0.25), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+body.species-page .species-card:hover::before {
+  opacity: 1;
+}
+
+body.species-page .species-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 60%);
+  opacity: 0.55;
+}
+
+body.species-page .species-card__image {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+body.species-page .species-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+body.species-page .species-card__category {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(100, 128, 92, 0.16);
+  color: rgba(31, 45, 30, 0.9);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  align-self: flex-start;
+}
+
+body.species-page .species-card h3 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--species-text);
+}
+
+body.species-page .species-card .tagline {
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+body.species-page .species-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+body.species-page .species-card .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(100, 128, 92, 0.12);
+  color: rgba(34, 45, 40, 0.9);
+}
+
+
+body.species-page .species-card .learn-more {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(100, 128, 92, 0.16);
+  color: var(--species-accent-2);
+  font-family: "Poppins", arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.species-page .species-card:hover .learn-more {
+  background: rgba(100, 128, 92, 0.18);
+  transform: translateX(2px);
+}
+
+body.species-page .species-card .learn-more i {
+  transition: transform 0.2s ease;
+}
+
+body.species-page .species-card:hover .learn-more i {
+  transform: translateX(2px);
+}
+
+body.species-page .no-results {
+  opacity: 0.8;
+  text-align: center;
+}
+
