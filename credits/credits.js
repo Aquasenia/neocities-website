@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const table = document.getElementById('credits-table');
-    const rows = Array.from(table.rows).slice(1); // Skip the header row
+    const rows = Array.from(table.rows).slice(2); // Skip the header row
 
     rows.sort((a, b) => {
         const aText = a.cells[0].textContent.trim();

@@ -50,6 +50,13 @@ a {
   text-decoration: none;
 }
 
+.icon, svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: -0.125em;
+    padding-right: 5px;
+  }
+
 /*Navigation bar styles, which will be reused across all pages of the website*/
 #navigation-bar {
   display: flex;

@@ -1,6 +1,7 @@
 :root {
   --background-color: #ffffff;
   --accent-color: #64805c;
+  --hover-accent-color: #485c42;
   --text-color: #000000;
   --italic-color: #595959;
 }
@@ -49,6 +50,12 @@ i {
   line-height: inherit;
 }
 
+i:hover {
+  color: var(--accent-color);
+  transition: color 0.25s ease;
+  will-change: color;
+}
+
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -75,14 +82,11 @@ th {
   color: inherit;
   font-family: "Playfair Display", "Arial", serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 24px;
 }
 
-tr {
-  border-bottom: 1.5px solid var(--accent-color);
-  border-bottom-style: dashed;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+th.border-under {
+  border-bottom: 3px solid var(--text-color);
 }
 
 td {
@@ -92,6 +96,128 @@ td {
   font-size: 16px;
   line-height: 1;
   padding: 10px 0;
+}
+
+td.table-data-border-under {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.small-icon {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  vertical-align: -0.125em;
+  padding-right: 5px;
+}
+
+.small-icon:after,
+.small-icon:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+.small-icon {
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.small-icon:hover {
+  transform: scale(1.1);
+}
+
+.small-icon:after {
+  transform: scale(1.1);
+}
+
+.small-icon:before {
+  transform: translate(-3px, -3px);
+}
+
+.small-icon:hover:after,
+.small-icon:hover:before {
+  transform: translate(0, 0);
+}
+
+
+.medium-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  vertical-align: -0.125em;
+  padding-right: 5px;
+}
+
+.medium-icon:after,
+.medium-icon:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+.medium-icon {
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.medium-icon:hover {
+  transform: scale(1.1);
+}
+
+.medium-icon:after {
+  transform: scale(1.1);
+}
+
+.medium-icon:before {
+  transform: translate(-3px, -3px);
+}
+
+.medium-icon:hover:after,
+.medium-icon:hover:before {
+  transform: translate(0, 0);
+}
+
+.large-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  vertical-align: -0.125em;
+  padding-right: 5px;
+}
+
+.large-icon:after,
+.large-icon:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+.large-icon {
+  transition: transform 0.2s ease;
+  transform: scale(1);
+}
+
+.large-icon:hover {
+  transform: scale(1.1);
+}
+
+.large-icon:after {
+  transform: scale(1.1);
+}
+
+.large-icon:before {
+  transform: translate(-3px, -3px);
+}
+
+.large-icon:hover:after,
+.large-icon:hover:before {
+  transform: translate(0, 0);
 }
 
 #navigation-bar {
